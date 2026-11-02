@@ -34,3 +34,10 @@ jobs:
           echo "Current branch is ${{github.ref}}."
 
         shell: bash
+
+      - name: Greet the user with variables and secrets
+        run: |
+          echo "Hello ${{ vars.NOBODYKNOWS }} from ${{ github.
+          actor }}."
+            echo "My secret is ${{ secrets.APIKEY }}."
+        shell: bash
