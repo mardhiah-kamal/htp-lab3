@@ -11,9 +11,22 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Display Repository Structure
         run: tree
+
+      - name: Change README Header using sed
+        run: |
+          echo "=== Modifying README Header ==="
+          # This swaps any line starting with '#' to '# My Checkout'
+          sed -i 's/^#.*/# My Checkout - Approved/' README.md
+        shell: bash
+       
+      - name: Verify Modified README
+        run: |
+          echo "=== Checking current README contents ==="
+          cat README.md
+        shell: bash
 
       - name: Greet the user
         run: |
