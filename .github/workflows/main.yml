@@ -11,5 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Greet the user
-        run: echo "Hello ${{github.actor}}"
+        run: |
+          echo "Hello ${{github.actor}}"
+          echo "Current branch is ${{github.ref}}."
         shell: bash
