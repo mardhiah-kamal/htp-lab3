@@ -6,7 +6,7 @@ on:
 jobs: 
   first_job:
     name: My First Job
-    runs-on: ubuntu-laes
+    runs-on: ubuntu-latest
     steps: 
       - name: Great the user
         run: echo "Hello ${{github.actor}}"
