@@ -1,0 +1,12 @@
+name: My First Workflow
+on: [push]
+  branches: 
+    - main
+jobs: 
+  first_job:
+    name: My First Job
+    runs-on: ubuntu-laes
+    steps: 
+      - name: Great the user
+        run: echo "Hello ${{github.actor}}"
+        shell: bash
