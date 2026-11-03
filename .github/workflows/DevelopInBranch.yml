@@ -49,8 +49,8 @@ jobs:
       pull-requests: write
 
     steps:
-      # Step 1: Check out the repository
+      # Step 1: Check out the repository.
       - uses: actions/checkout@v4.1.0
 
-      # Step 2: Run Actionlint to check workflow files
+      # Step 2: Run Actionlint to check workflow files.
       - uses: devops-actions/actionlint@v0.1.2
